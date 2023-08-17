@@ -1,0 +1,40 @@
+<%
+let formacoes = [
+    {
+        "ano": 2007,
+        "curso": "Tecnologia em Telemática",
+        "instituicao": "IFCE"
+    },
+    {
+        "ano": 2009,
+        "curso": "Mestrado em Ciência da Computação",
+        "instituicao": "UECE"
+    }
+];
+%>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Hello, Node!</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<%- include('/home/node/app/views/cabecalho.ejs') %>
+    <main>
+        <h1>Renato</h1>
+        <section>
+            <h1>Formação acadêmica</h1>
+<% for (let formacao of formacoes) { %>
+            <article>
+                <h1><%= formacao.curso %></h1>
+                <span><%= formacao.instituicao %></span> - <span><%= formacao.ano %></span>
+            </article>
+<% } %>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Renato</p>
+    </footer>
+</body>
+</html>

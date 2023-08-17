@@ -1,0 +1,45 @@
+<%
+let nome = body.nome;
+let nota1 = parseInt(body.nota1);
+let nota2 = parseInt(body.nota2);
+let media = (nota1 + nota2) / 2;
+let situacao;
+if (media >= 6) {
+    situacao = 'aprovado';
+}
+else if (media >= 3) {
+    situacao = 'exame';
+}
+else {
+    situacao = 'reprovado';
+}
+%>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Hello, Node!</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<%- include('/home/node/app/views/cabecalho.ejs') %>
+    <main>
+        <h1>Média</h1>
+        <p>Receba o nome e duas notas. Calcule e mostre o nome, as notas, a média e se a situação, considerando "aprovado" se a média for maior ou igual a 6, "exame" se a média ficar entre 3 e 6, e "reprovado" se a média for menor que 3.</p>
+        <div class="<%= situacao %>">
+            <p>Olá, <%= nome %>! Você tirou <%= nota1 %> e <%= nota2 %>, ficou com média <%= media %>.</p>
+<% if (situacao == 'aprovado') { %>
+            <p>Parabéns, você foi aprovado!</p>
+<% } else if (situacao == 'exame') { %>
+            <p>Você deve fazer exame final!</p>
+<% } else { %>
+            <p>Você foi reprovado!</p>
+<% } %>
+
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por Renato</p>
+    </footer>
+</body>
+</html>

@@ -63,6 +63,15 @@ Acesse pelo navegador http://localhost:3000.
 |-- app/
 |   |-- <b>app.js (Seu servidor dinâmico)</b>
 |   |-- package.json (Descreve seu pacote)
+|   |-- public/ (Pasta pública com arquivos estáticos)
+|   |   |-- css/
+|   |   |   |-- estilo.css
+|   |   |-- favicon.ico
+|   |-- views/
+|   |   |-- index.ejs
+|   |   |-- autor.ejs
+|   |   |-- cabecalho.ejs
+|   |   |-- media.ejs
 </pre>
 
 Um servidor web é um programa para atender requisições HTTP. O servidor mais simples possível em Node.js (`app.js`) fica assim:
