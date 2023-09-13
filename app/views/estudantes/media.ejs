@@ -1,19 +1,3 @@
-<%
-let nome = body.nome;
-let nota1 = parseInt(body.nota1);
-let nota2 = parseInt(body.nota2);
-let media = (nota1 + nota2) / 2;
-let situacao;
-if (media >= 6) {
-    situacao = 'aprovado';
-}
-else if (media >= 3) {
-    situacao = 'exame';
-}
-else {
-    situacao = 'reprovado';
-}
-%>
 <!DOCTYPE HTML>
 <html>
 <head>

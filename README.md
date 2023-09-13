@@ -67,11 +67,18 @@ Acesse pelo navegador http://localhost:3000.
 |   |   |-- css/
 |   |   |   |-- estilo.css
 |   |   |-- favicon.ico
+|   |-- controllers/
+|   |-- |-- EstudantesController.js
+|   |-- |-- AutorController.js
+|   |-- |-- StaticController.js
+|   |-- models/
+|   |-- |-- Estudante.js
 |   |-- views/
-|   |   |-- index.ejs
+|   |   |-- estudantes/
+|   |   |-- |-- index.ejs
+|   |   |-- |-- media.ejs
 |   |   |-- autor.ejs
 |   |   |-- cabecalho.ejs
-|   |   |-- media.ejs
 </pre>
 
 Um servidor web é um programa para atender requisições HTTP. O servidor mais simples possível em Node.js (`app.js`) fica assim:

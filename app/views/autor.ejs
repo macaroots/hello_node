@@ -1,17 +1,3 @@
-<%
-let formacoes = [
-    {
-        "ano": 2007,
-        "curso": "Tecnologia em Telemática",
-        "instituicao": "IFCE"
-    },
-    {
-        "ano": 2009,
-        "curso": "Mestrado em Ciência da Computação",
-        "instituicao": "UECE"
-    }
-];
-%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -22,7 +8,7 @@ let formacoes = [
 <body>
 <%- include('/home/node/app/views/cabecalho.ejs') %>
     <main>
-        <h1>Renato</h1>
+        <h1><%= nome %></h1>
         <section>
             <h1>Formação acadêmica</h1>
 <% for (let formacao of formacoes) { %>
