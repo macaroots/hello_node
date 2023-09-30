@@ -13,8 +13,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "ejs": "^3.1.9",
+    "jsonwebtoken": "^9.0.2",
     "mime": "^2",
     "nodemon": "^3.0.1"
-  },
-  "devDependencies": {}
+  }
 }
